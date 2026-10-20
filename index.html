@@ -1,294 +1,460 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zoui — Organize o financeiro do seu negócio pelo WhatsApp</title>
-  <meta name="description" content="Envie uma foto do comprovante ou um áudio no WhatsApp e tenha o financeiro do seu negócio organizado automaticamente. Garanta sua vaga no acesso antecipado." />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zoui — Organize o financeiro do seu negócio pelo WhatsApp</title>
+    <meta
+      name="description"
+      content="Envie uma foto do comprovante ou um áudio no WhatsApp e tenha o financeiro do seu negócio organizado automaticamente. Garanta sua vaga no acesso antecipado."
+    />
 
-  <!-- Google Analytics (GA4) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EWHZQ9692Z"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-EWHZQ9692Z');
-  </script>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            whatsapp: {
-              DEFAULT: '#25D366',
-              dark: '#1DA851'
-            }
-          }
-        }
+    <!-- Google Analytics (GA4) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-EWHZQ9692Z"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
       }
-    }
-  </script>
-</head>
-<body class="bg-slate-50 text-slate-800 antialiased">
+      gtag("js", new Date());
+      gtag("config", "G-EWHZQ9692Z");
+    </script>
 
-  <!-- ===================== HEADER ===================== -->
-  <header class="w-full border-b border-slate-200 bg-white/80 backdrop-blur sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      <div class="flex items-center gap-2">
-        <span class="text-xl font-extrabold tracking-tight text-slate-900">Zoui</span>
-        <span class="hidden sm:inline-flex items-center rounded-full bg-emerald-50 text-whatsapp-dark text-xs font-semibold px-2.5 py-1 border border-emerald-200">
-          Acesso Antecipado
-        </span>
-      </div>
-      <a href="#cta-hero"
-         class="inline-flex items-center justify-center rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold px-4 py-2 transition-colors">
-        Garantir Vaga
-      </a>
-    </div>
-  </header>
-
-  <!-- ===================== HERO ===================== -->
-  <section class="relative overflow-hidden">
-    <div class="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 pt-12 pb-16 sm:pt-16 sm:pb-20 lg:pt-24 lg:pb-28">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-
-        <!-- Coluna de texto + formulário -->
-        <div>
-          <div class="inline-flex items-center gap-2 rounded-full bg-emerald-50 border border-emerald-200 text-whatsapp-dark text-sm font-medium px-4 py-1.5 mb-6">
-            🚀 O fim do controle de caixa no papel e nas planilhas
-          </div>
-
-          <h1 class="text-4xl sm:text-5xl lg:text-[3.25rem] font-extrabold tracking-tight text-slate-900 leading-[1.1]">
-            Organize o financeiro da sua empresa no
-            <span class="text-whatsapp-dark">WhatsApp</span>
-            enviando apenas fotos ou áudios.
-          </h1>
-
-          <p class="mt-6 text-lg text-slate-600 leading-relaxed max-w-xl">
-            Sem digitação manual, sem sistemas complicados. Saiba exatamente o lucro do seu dia
-            e receba alertas de boletos em menos de 10 segundos.
-          </p>
-
-          <!-- Formulário de Inscrição (HERO) — embed do Tally -->
-          <div id="cta-hero" class="mt-10 bg-white rounded-2xl border border-slate-200 shadow-sm shadow-slate-200/50 p-6 sm:p-7 max-w-lg scroll-mt-24">
-            <iframe
-              data-tally-src="https://tally.so/embed/xVx6zJ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-              loading="lazy"
-              width="100%"
-              height="400"
-              frameborder="0"
-              marginheight="0"
-              marginwidth="0"
-              title="Zoui - Acesso Antecipado"
-            ></iframe>
-            <p class="text-xs text-center text-slate-500 pt-1">
-              🔒 100% Grátis durante a fase Beta. Zero spam.
-            </p>
-          </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              whatsapp: {
+                DEFAULT: "#25D366",
+                dark: "#1DA851",
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-slate-50 text-slate-800 antialiased">
+    <!-- ===================== HEADER ===================== -->
+    <header
+      class="w-full border-b border-slate-200 bg-white/80 backdrop-blur sticky top-0 z-50"
+    >
+      <div
+        class="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 h-16 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-2">
+          <span class="text-xl font-extrabold tracking-tight text-slate-900"
+            >Zoui</span
+          >
+          <span
+            class="hidden sm:inline-flex items-center rounded-full bg-emerald-50 text-whatsapp-dark text-xs font-semibold px-2.5 py-1 border border-emerald-200"
+          >
+            Acesso Antecipado
+          </span>
         </div>
+        <a
+          href="#cta-hero"
+          class="inline-flex items-center justify-center rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold px-4 py-2 transition-colors"
+        >
+          Garantir Vaga
+        </a>
+      </div>
+    </header>
 
-        <!-- Coluna do Mockup do WhatsApp -->
-        <div class="flex justify-center lg:justify-end">
-          <div class="w-full max-w-sm rounded-[2rem] border border-slate-200 bg-slate-100 shadow-xl shadow-slate-300/40 p-3">
-            <!-- "Tela" do smartphone -->
-            <div class="rounded-[1.5rem] bg-[#E5DDD5] overflow-hidden">
+    <!-- ===================== HERO ===================== -->
+    <section class="relative overflow-hidden">
+      <div
+        class="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 pt-12 pb-16 sm:pt-16 sm:pb-20 lg:pt-24 lg:pb-28"
+      >
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <!-- Coluna de texto + formulário -->
+          <div>
+            <div
+              class="inline-flex items-center gap-2 rounded-full bg-emerald-50 border border-emerald-200 text-whatsapp-dark text-sm font-medium px-4 py-1.5 mb-6"
+            >
+              🚀 O fim do controle de caixa no papel e nas planilhas
+            </div>
 
-              <!-- Barra de topo estilo WhatsApp -->
-              <div class="bg-emerald-700 px-4 py-3 flex items-center gap-3">
-                <div class="h-9 w-9 rounded-full bg-emerald-200 flex items-center justify-center text-emerald-800 font-bold text-sm">
-                  ZU
+            <h1
+              class="text-4xl sm:text-5xl lg:text-[3.25rem] font-extrabold tracking-tight text-slate-900 leading-[1.1]"
+            >
+              Organize o financeiro da sua empresa no
+              <span class="text-whatsapp-dark">WhatsApp</span>
+              enviando apenas fotos ou áudios.
+            </h1>
+
+            <p class="mt-6 text-lg text-slate-600 leading-relaxed max-w-xl">
+              Sem digitação manual, sem sistemas complicados. Saiba exatamente o
+              lucro do seu dia e receba alertas de boletos em menos de 10
+              segundos.
+            </p>
+
+            <!-- Formulário de Inscrição (HERO) — embed do Tally -->
+            <div
+              id="cta-hero"
+              class="mt-10 bg-white rounded-2xl border border-slate-200 shadow-sm shadow-slate-200/50 p-6 sm:p-7 max-w-lg scroll-mt-24"
+            >
+              <iframe
+                data-tally-src="https://tally.so/embed/xVx6zJ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                loading="lazy"
+                width="100%"
+                height="400"
+                frameborder="0"
+                marginheight="0"
+                marginwidth="0"
+                title="Zoui - Acesso Antecipado"
+              ></iframe>
+              <p class="text-xs text-center text-slate-500 pt-1">
+                🔒 100% Grátis durante a fase Beta. Zero spam.
+              </p>
+            </div>
+          </div>
+
+          <!-- Coluna do Mockup do WhatsApp -->
+          <div class="flex justify-center lg:justify-end">
+            <div
+              class="w-full max-w-sm rounded-[2rem] border border-slate-200 bg-slate-100 shadow-xl shadow-slate-300/40 p-3"
+            >
+              <!-- "Tela" do smartphone -->
+              <div class="rounded-[1.5rem] bg-[#E5DDD5] overflow-hidden">
+                <!-- Barra de topo estilo WhatsApp -->
+                <div class="bg-emerald-700 px-4 py-3 flex items-center gap-3">
+                  <div
+                    class="h-9 w-9 rounded-full bg-emerald-200 flex items-center justify-center text-emerald-800 font-bold text-sm"
+                  >
+                    ZU
+                  </div>
+                  <div>
+                    <p class="text-white text-sm font-semibold leading-tight">
+                      Zoui Assistente
+                    </p>
+                    <p class="text-emerald-100 text-xs leading-tight">online</p>
+                  </div>
                 </div>
-                <div>
-                  <p class="text-white text-sm font-semibold leading-tight">Zoui Assistente</p>
-                  <p class="text-emerald-100 text-xs leading-tight">online</p>
-                </div>
-              </div>
 
-              <!-- Conversa -->
-              <div class="p-4 space-y-3 min-h-[22rem]">
-
-                <!-- Mensagem do usuário: foto do comprovante -->
-                <div class="flex justify-end">
-                  <div class="max-w-[85%] bg-emerald-100 rounded-lg rounded-tr-none px-3 py-2 shadow-sm">
-                    <div class="flex items-center gap-2 bg-white/60 rounded-md px-2 py-1.5 mb-1">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-emerald-700 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14M14 8h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                      </svg>
-                      <span class="text-xs text-slate-600">comprovante_pix.jpg</span>
+                <!-- Conversa -->
+                <div class="p-4 space-y-3 min-h-[22rem]">
+                  <!-- Mensagem do usuário: foto do comprovante -->
+                  <div class="flex justify-end">
+                    <div
+                      class="max-w-[85%] bg-emerald-100 rounded-lg rounded-tr-none px-3 py-2 shadow-sm"
+                    >
+                      <div
+                        class="flex items-center gap-2 bg-white/60 rounded-md px-2 py-1.5 mb-1"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5 text-emerald-700 shrink-0"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.8"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14M14 8h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                          />
+                        </svg>
+                        <span class="text-xs text-slate-600"
+                          >comprovante_pix.jpg</span
+                        >
+                      </div>
+                      <p class="text-sm text-slate-800">
+                        Gastei 150 reais no posto Shell agora
+                      </p>
+                      <p class="text-[10px] text-slate-500 text-right mt-1">
+                        09:42 ✓✓
+                      </p>
                     </div>
-                    <p class="text-sm text-slate-800">Gastei 150 reais no posto Shell agora</p>
-                    <p class="text-[10px] text-slate-500 text-right mt-1">09:42 ✓✓</p>
+                  </div>
+
+                  <!-- Resposta automática da IA -->
+                  <div class="flex justify-start">
+                    <div
+                      class="max-w-[90%] bg-white rounded-lg rounded-tl-none px-3 py-2.5 shadow-sm space-y-2"
+                    >
+                      <p
+                        class="text-sm text-slate-800 flex items-start gap-1.5"
+                      >
+                        <span>🔴</span>
+                        <span
+                          ><span class="font-semibold"
+                            >Despesa registrada:</span
+                          >
+                          R$ 150,00 (Combustível)</span
+                        >
+                      </p>
+                      <p
+                        class="text-sm text-slate-800 flex items-start gap-1.5"
+                      >
+                        <span>📊</span>
+                        <span
+                          ><span class="font-semibold"
+                            >Saldo Livre de Hoje:</span
+                          >
+                          R$ 680,00</span
+                        >
+                      </p>
+                      <p
+                        class="text-sm text-slate-800 flex items-start gap-1.5"
+                      >
+                        <span>🔔</span>
+                        <span
+                          ><span class="font-semibold">Lembrete:</span> Amanhã
+                          vence a guia do Simples (R$ 350,00).</span
+                        >
+                      </p>
+                      <p class="text-[10px] text-slate-400 text-right">09:42</p>
+                    </div>
                   </div>
                 </div>
 
-                <!-- Resposta automática da IA -->
-                <div class="flex justify-start">
-                  <div class="max-w-[90%] bg-white rounded-lg rounded-tl-none px-3 py-2.5 shadow-sm space-y-2">
-                    <p class="text-sm text-slate-800 flex items-start gap-1.5">
-                      <span>🔴</span>
-                      <span><span class="font-semibold">Despesa registrada:</span> R$ 150,00 (Combustível)</span>
-                    </p>
-                    <p class="text-sm text-slate-800 flex items-start gap-1.5">
-                      <span>📊</span>
-                      <span><span class="font-semibold">Saldo Livre de Hoje:</span> R$ 680,00</span>
-                    </p>
-                    <p class="text-sm text-slate-800 flex items-start gap-1.5">
-                      <span>🔔</span>
-                      <span><span class="font-semibold">Lembrete:</span> Amanhã vence a guia do Simples (R$ 350,00).</span>
-                    </p>
-                    <p class="text-[10px] text-slate-400 text-right">09:42</p>
+                <!-- Campo de digitação (decorativo) -->
+                <div
+                  class="bg-[#F0F0F0] px-3 py-2.5 flex items-center gap-2 border-t border-black/5"
+                >
+                  <div
+                    class="flex-1 bg-white rounded-full px-4 py-2 text-sm text-slate-400"
+                  >
+                    Mensagem
+                  </div>
+                  <div
+                    class="h-9 w-9 rounded-full bg-emerald-600 flex items-center justify-center shrink-0"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-4 w-4 text-white"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                    </svg>
                   </div>
                 </div>
-
               </div>
-
-              <!-- Campo de digitação (decorativo) -->
-              <div class="bg-[#F0F0F0] px-3 py-2.5 flex items-center gap-2 border-t border-black/5">
-                <div class="flex-1 bg-white rounded-full px-4 py-2 text-sm text-slate-400">
-                  Mensagem
-                </div>
-                <div class="h-9 w-9 rounded-full bg-emerald-600 flex items-center justify-center shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
-                  </svg>
-                </div>
-              </div>
-
             </div>
           </div>
         </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===================== BENEFÍCIOS ===================== -->
-  <section class="bg-white border-y border-slate-200">
-    <div class="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 py-16 sm:py-20">
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
-          Tudo que seu negócio precisa, sem sair do WhatsApp
+    <!-- ===================== BENEFÍCIOS ===================== -->
+    <section class="bg-white border-y border-slate-200">
+      <div class="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <h2
+            class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900"
+          >
+            Tudo que seu negócio precisa, sem sair do WhatsApp
+          </h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Card 1 -->
+          <div
+            class="rounded-2xl border border-slate-200 p-6 hover:shadow-md transition-shadow"
+          >
+            <div
+              class="h-11 w-11 rounded-xl bg-indigo-50 flex items-center justify-center mb-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 text-indigo-600"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">
+              ⚡ Zero Digitação e Atrito
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Tirou foto do Pix, nota ou mandou áudio, tá registrado. Esqueça o
+              trabalho de sentar no computador à noite.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="rounded-2xl border border-slate-200 p-6 hover:shadow-md transition-shadow"
+          >
+            <div
+              class="h-11 w-11 rounded-xl bg-emerald-50 flex items-center justify-center mb-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 text-whatsapp-dark"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">
+              📊 Clareza do Lucro Real
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Receba todo fim de dia o resumo de entradas, saídas e quanto
+              dinheiro realmente sobrou.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="rounded-2xl border border-slate-200 p-6 hover:shadow-md transition-shadow sm:col-span-2 lg:col-span-1"
+          >
+            <div
+              class="h-11 w-11 rounded-xl bg-rose-50 flex items-center justify-center mb-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 text-rose-600"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+                />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">
+              🚨 Radar de Contas a Pagar
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Nunca mais seja pego de surpresa por boletos ou impostos que
+              venceu esquecido.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FECHAMENTO / CTA FINAL ===================== -->
+    <section class="bg-slate-900">
+      <div
+        class="max-w-4xl mx-auto px-5 sm:px-6 lg:px-8 py-16 sm:py-20 text-center"
+      >
+        <h2
+          class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white"
+        >
+          As vagas do Beta gratuito são limitadas
         </h2>
-      </div>
-
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <!-- Card 1 -->
-        <div class="rounded-2xl border border-slate-200 p-6 hover:shadow-md transition-shadow">
-          <div class="h-11 w-11 rounded-xl bg-indigo-50 flex items-center justify-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-          </div>
-          <h3 class="text-lg font-bold text-slate-900 mb-2">⚡ Zero Digitação e Atrito</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">
-            Tirou foto do Pix, nota ou mandou áudio, tá registrado. Esqueça o trabalho de sentar
-            no computador à noite.
-          </p>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="rounded-2xl border border-slate-200 p-6 hover:shadow-md transition-shadow">
-          <div class="h-11 w-11 rounded-xl bg-emerald-50 flex items-center justify-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-whatsapp-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-            </svg>
-          </div>
-          <h3 class="text-lg font-bold text-slate-900 mb-2">📊 Clareza do Lucro Real</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">
-            Receba todo fim de dia o resumo de entradas, saídas e quanto dinheiro realmente sobrou.
-          </p>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="rounded-2xl border border-slate-200 p-6 hover:shadow-md transition-shadow sm:col-span-2 lg:col-span-1">
-          <div class="h-11 w-11 rounded-xl bg-rose-50 flex items-center justify-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-rose-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-            </svg>
-          </div>
-          <h3 class="text-lg font-bold text-slate-900 mb-2">🚨 Radar de Contas a Pagar</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">
-            Nunca mais seja pego de surpresa por boletos ou impostos que venceu esquecido.
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== FECHAMENTO / CTA FINAL ===================== -->
-  <section class="bg-slate-900">
-    <div class="max-w-4xl mx-auto px-5 sm:px-6 lg:px-8 py-16 sm:py-20 text-center">
-      <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
-        As vagas do Beta gratuito são limitadas
-      </h2>
-      <p class="mt-4 text-slate-300 text-lg max-w-2xl mx-auto">
-        Garanta agora seu acesso antecipado e seja um dos primeiros negócios a organizar o
-        financeiro direto pelo WhatsApp — sem custo durante a fase Beta.
-      </p>
-
-      <!-- Formulário de Inscrição (FECHAMENTO) — embed do Tally -->
-      <div id="cta-final" class="mt-10 bg-white rounded-2xl p-6 sm:p-7 max-w-lg mx-auto text-left scroll-mt-24">
-        <iframe
-          data-tally-src="https://tally.so/embed/xVx6zJ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-          loading="lazy"
-          width="100%"
-          height="400"
-          frameborder="0"
-          marginheight="0"
-          marginwidth="0"
-          title="Zoui - Acesso Antecipado"
-        ></iframe>
-        <p class="text-xs text-center text-slate-500 pt-1">
-          🔒 100% Grátis durante a fase Beta. Zero spam.
+        <p class="mt-4 text-slate-300 text-lg max-w-2xl mx-auto">
+          Garanta agora seu acesso antecipado e seja um dos primeiros negócios a
+          organizar o financeiro direto pelo WhatsApp — sem custo durante a fase
+          Beta.
         </p>
+
+        <!-- Formulário de Inscrição (FECHAMENTO) — embed do Tally -->
+        <div
+          id="cta-final"
+          class="mt-10 bg-white rounded-2xl p-6 sm:p-7 max-w-lg mx-auto text-left scroll-mt-24"
+        >
+          <iframe
+            data-tally-src="https://tally.so/embed/xVx6zJ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+            loading="lazy"
+            width="100%"
+            height="400"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            title="Zoui - Acesso Antecipado"
+          ></iframe>
+          <p class="text-xs text-center text-slate-500 pt-1">
+            🔒 100% Grátis durante a fase Beta. Zero spam.
+          </p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===================== FOOTER ===================== -->
-  <footer class="bg-white border-t border-slate-200">
-    <div class="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-3">
-      <p class="text-sm text-slate-500">&copy; 2026 Zoui. Todos os direitos reservados.</p>
-      <!-- TODO: criar página real de política de privacidade e trocar o href abaixo -->
-      <a href="#" class="text-sm text-slate-500 hover:text-slate-700 underline underline-offset-2">
-        Política de Privacidade
-      </a>
-    </div>
-  </footer>
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="bg-white border-t border-slate-200">
+      <div
+        class="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-3"
+      >
+        <p class="text-sm text-slate-500">
+          &copy; 2026 Zoui. Todos os direitos reservados.
+        </p>
+        <!-- TODO: criar página real de política de privacidade e trocar o href abaixo -->
+        <a
+          href="#"
+          class="text-sm text-slate-500 hover:text-slate-700 underline underline-offset-2"
+        >
+          Política de Privacidade
+        </a>
+      </div>
+    </footer>
 
-  <!-- Script oficial do Tally para carregar/redimensionar os embeds da página -->
-  <script>
-    var d = document, w = "https://tally.so/widgets/embed.js", v = function () {
-      "undefined" != typeof Tally ? Tally.loadEmbeds() : d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function (e) {
-        e.src = e.dataset.tallySrc;
-      });
-    };
-    if ("undefined" != typeof Tally) v();
-    else if (d.querySelector('script[src="' + w + '"]') == null) {
-      var s = d.createElement("script");
-      s.src = w;
-      s.onload = v;
-      s.onerror = v;
-      d.body.appendChild(s);
-    }
-  </script>
-
-  <!-- Envia evento de conversão (generate_lead) ao GA4 quando o formulário Tally é enviado -->
-  <script>
-    window.addEventListener("message", function (event) {
-      if (event.origin !== "https://tally.so") return;
-      var payload = event.data;
-      if (payload && payload.event === "Tally.FormSubmitted" && typeof gtag === "function") {
-        gtag("event", "generate_lead", {
-          form_id: payload.payload && payload.payload.formId
-        });
+    <!-- Script oficial do Tally para carregar/redimensionar os embeds da página -->
+    <script>
+      var d = document,
+        w = "https://tally.so/widgets/embed.js",
+        v = function () {
+          "undefined" != typeof Tally
+            ? Tally.loadEmbeds()
+            : d
+                .querySelectorAll("iframe[data-tally-src]:not([src])")
+                .forEach(function (e) {
+                  e.src = e.dataset.tallySrc;
+                });
+        };
+      if ("undefined" != typeof Tally) v();
+      else if (d.querySelector('script[src="' + w + '"]') == null) {
+        var s = d.createElement("script");
+        s.src = w;
+        s.onload = v;
+        s.onerror = v;
+        d.body.appendChild(s);
       }
-    });
-  </script>
+    </script>
 
-</body>
+    <!-- Envia evento de conversão (generate_lead) ao GA4 quando o formulário Tally é enviado -->
+    <script>
+      window.addEventListener("message", function (event) {
+        if (event.origin !== "https://tally.so") return;
+
+        var payload = event.data;
+        if (typeof payload === "string") {
+          try {
+            payload = JSON.parse(payload);
+          } catch (e) {
+            return;
+          }
+        }
+
+        if (
+          payload &&
+          payload.event === "Tally.FormSubmitted" &&
+          typeof gtag === "function"
+        ) {
+          gtag("event", "generate_lead", {
+            form_id: payload.payload && payload.payload.formId,
+          });
+        }
+      });
+    </script>
+  </body>
 </html>
