@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zoui — Organize o financeiro do seu negócio pelo WhatsApp</title>
   <meta name="description" content="Envie uma foto do comprovante ou um áudio no WhatsApp e tenha o financeiro do seu negócio organizado automaticamente. Garanta sua vaga no acesso antecipado." />
+
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EWHZQ9692Z"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-EWHZQ9692Z');
+  </script>
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -265,6 +275,19 @@
       s.onerror = v;
       d.body.appendChild(s);
     }
+  </script>
+
+  <!-- Envia evento de conversão (generate_lead) ao GA4 quando o formulário Tally é enviado -->
+  <script>
+    window.addEventListener("message", function (event) {
+      if (event.origin !== "https://tally.so") return;
+      var payload = event.data;
+      if (payload && payload.event === "Tally.FormSubmitted" && typeof gtag === "function") {
+        gtag("event", "generate_lead", {
+          form_id: payload.payload && payload.payload.formId
+        });
+      }
+    });
   </script>
 
 </body>
